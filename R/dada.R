@@ -189,9 +189,6 @@ dada <- function(derep,
 
   qmax <- ceiling(qmax) # Only getting averages from derep$quals
   if(qmax > 45) {
-    if(qmax > 62) {
-      stop("derep$quals matrix has an invalid maximum Phred Quality Scores of ", qmax) 
-    }
     warning("derep$quals matrix has Phred Quality Scores >45. For Illumina 1.8 or earlier, this is unexpected.")
   }
   
